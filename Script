@@ -1,0 +1,42 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+--
+local window = DrRayLibrary:Load("Vercore.xyz v5 paid", "Default")
+--
+local tab = DrRayLibrary.newTab("⚔️Combat⚔️", "ImageIdHere")
+-- hitbox
+tab.newButton("Hitbox", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/V5%20hitbox",true))()
+end)
+-- no cooldown
+tab.newButton("No cooldown", "MiningDrill", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/Mine%20speed%20v5",true))()
+end)
+local tab = DrRayLibrary.newTab("👀Visuals 1👀", "ImageIdHere")
+-- Esp
+tab.newButton("Esp", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/V5%20esp",true))()
+end)
+-- CrossHair
+tab.newButton("CrossHair", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/Cross%20hair",true))()
+end)
+-- name
+loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Free-v5/refs/heads/main/Name",true))()
+local tab = DrRayLibrary.newTab("❓Random❓", "ImageIdHere")
+-- Chat Spammer
+local Chatspam = false
+local spamspeed = speed
+tab.newToggle("Chat Spammer", "", true, function(toggleState)
+    if toggleState then
+        Chatspam = true
+    else
+        Chatspam = false
+    end
+end)
+while true do
+    speed = task.wait(1)
+    if Chatspam then
+        local shitchat = game.TextChatService.TextChannels.RBXGeneral
+        shitchat:SendAsync(".gg Q8a9yQb7NY")
+    end
+end
